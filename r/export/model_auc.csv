@@ -1,0 +1,5 @@
+"model","auc"
+"Grade only (LendingClub rating)",0.66752438604682
+"Borrower data only (no grade)",0.654888419725326
+"Borrower data + grade",0.685105112796973
+"Borrower data only, no employment length",0.65363374388557
