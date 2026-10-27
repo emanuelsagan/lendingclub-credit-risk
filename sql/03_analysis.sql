@@ -91,7 +91,7 @@ GROUP BY grade
 ORDER BY grade;
 
 -- 1b. Net return split by outcome
--- Defaulted loans lose ~45-50%, fully paid loans earn more with risk.
+-- Defaulted loans lose ~35-41%, fully paid loans earn more with risk.
 -- -> README Results 1, "Net return by outcome"
 SELECT
     grade,
