@@ -2,7 +2,18 @@
 
 End-to-end analysis of credit risk and profitability on the public **LendingClub** consumer-loan dataset (2007-2018, Kaggle): SQL for the analysis, R for a default-probability model, Power BI for an interactive dashboard.
 
-**In short:** within a grade, DTI is not priced (default rates rise by 3-14 pp, interest rates barely move), and a logistic model built on borrower data adds +0.2-0.3 pp of net return over selecting loans by grade alone.
+
+## Summary
+
+**What changed.** Between 2013 and 2015 the net return on 36-month loans fell from 11.1% to 6.6% while the default rate rose from 12.3% to 14.9%. By 2015 grades F and G lose money (-1.8% and -5.3%).
+
+**Why.** Not because of a riskier loan mix: grade mix, FICO and loan size are stable. Default rates rose in every grade, while the interest rate charged for the same sub-grade fell in all 25 sub-grades A1-E5 (by 0.4-2.5 pp). Roughly 60% of the fall in return comes from fully paid loans earning less, 30% from more charge-offs and 10% from larger losses per charge-off. Pricing also ignores DTI within a grade: default rates rise by 3-14 pp between low and high DTI, interest rates barely move.
+
+**What it means.** Pricing followed the grade almost exclusively and did not react to rising defaults or to DTI. Selecting loans with a model built on borrower data earns +0.2-0.3 pp more than a grade cut-off, a small but statistically reliable gain. A model trained on 2012-2014 underestimates 2015 risk by 1.2-3.6 pp from decile 4 up, so it would need recalibration on recent data before being used for pricing. The data cannot show why rates fell, and returns are nominal.
+
+**Full context.** [Data and method](#data-and-method), [Results 1-7](#results), [Limitations](#limitations), [Power BI dashboard](#power-bi-dashboard).
+
+
 
 The project asks three questions:
 
